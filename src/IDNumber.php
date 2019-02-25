@@ -62,6 +62,7 @@ class IDNumber
         $dateTimeBirthdate = (new \DateTime())->setDate($birthYear, $this->birthMonthNum, $this->birthDayNum);
 
         return new IDNumberData(
+            $this->idNumber,
             $dateTimeBirthdate->format('Y-m-d'),
             (new \DateTime)->diff($dateTimeBirthdate)->y,
             $this->genderNum >= 5000 ? 'Male' : 'Female',
