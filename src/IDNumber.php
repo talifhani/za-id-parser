@@ -60,7 +60,7 @@ class IDNumber
         $birthYear = $this->getBirthYearFromTwoDigitYear($this->birthYearNum);
 
         $dateTimeBirthdate = (new \DateTime())->setDate($birthYear, $this->birthMonthNum, $this->birthDayNum);
-
+        
         return new IDNumberData(
             $this->idNumber,
             $dateTimeBirthdate->format('Y-m-d'),

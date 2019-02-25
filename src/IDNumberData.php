@@ -84,7 +84,7 @@ class IDNumberData{
         $idArray['age'] = (new \DateTime)->diff($dateTimeBirthdate)->y;
         $idArray['gender'] = $this->genderNum >= 5000 ? 'Male' : 'Female';
         $idArray['citizenship'] = $this->citisenshipNum == 0 ? 'South African' : ($this->citisenshipNum == 1 ? 'Non South African' : 'Refugee');
-        $idArray['valid'] = $this->valid;
+        $idArray['valid'] = (bool) $this->valid;
         
         return $idArray;
     }
