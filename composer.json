@@ -1,0 +1,22 @@
+{
+    "name": "semicolon/za-id-validator",
+    "version": "1.0.0",
+    "description": "Package to parse and validate South African ID Numbers",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tali Luvhengo",
+            "email": "tali@semicolon.co.za"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Semicolon\\ZaIdValidator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Semicolon\\ZaIdValidator\\": "test/"
+        }
+    }
+}
