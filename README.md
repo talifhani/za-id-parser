@@ -21,6 +21,15 @@ echo  "Gender: ".$idNumberData->getGender()."<br />";
 echo  "Is Valid ID: ".$idNumberData->isValid() ? 'Yes' : 'No';
 
 print_r($idNumberData->toArray());
+/*
+(
+    [birthdate] => 1988-09-15
+    [age] => 30
+    [gender] => Female
+    [citizenship] => South African
+    [valid] => 1
+)
+*/
 ```  
 
 ## Contributing
