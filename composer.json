@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "description": "Package to parse and validate South African ID Numbers",
     "license": "MIT",
+    "require-dev": {
+        "phpunit/phpunit": "^7.4"
+    },
     "authors": [
         {
             "name": "Tali Luvhengo",
@@ -18,5 +21,16 @@
         "psr-4": {
             "SemicolonZA\\ZaIdValidator\\": "test/"
         }
+    },
+    "scripts": {
+        "check": [
+            "@test",
+            "@cs-check",
+            "@analyze"
+        ],
+        "analyze": "phpstan analyze -l max -c phpstan.neon ./src",
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "test": "phpunit"
     }
 }
