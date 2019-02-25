@@ -1,4 +1,4 @@
-<?php namespace Semicolon\ZaIdValidator;
+<?php namespace SemicolonZA\ZaIdValidator;
 
 class CitizenShipEnum
 {

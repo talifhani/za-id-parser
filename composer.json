@@ -1,5 +1,5 @@
 {
-    "name": "semicolon/za-id-validator",
+    "name": "semicolonza/za-id-validator",
     "version": "1.0.0",
     "description": "Package to parse and validate South African ID Numbers",
     "license": "MIT",
@@ -11,12 +11,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Semicolon\\ZaIdValidator\\": "src/"
+            "SemicolonZA\\ZaIdValidator\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Semicolon\\ZaIdValidator\\": "test/"
+            "SemicolonZA\\ZaIdValidator\\": "test/"
         }
     }
 }

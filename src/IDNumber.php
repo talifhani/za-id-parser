@@ -1,4 +1,4 @@
-<?php namespace Semicolon\ZaIdValidator;
+<?php namespace SemicolonZA\ZaIdValidator;
 
 /**
  * @author Tali Luvhengo <tali@semicolon.co.za>
