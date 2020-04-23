@@ -4,21 +4,21 @@ Package to parse and validate South African ID Numbers.</p>
 
 ```shell
 
-$ composer require semicolon/za-id-validator -vvv
+$ composer require semicolonza/za-id-validator -vvv
 
 ```
 
 ## Usage
 ```php
 use SemicolonZA\ZaIdValidator\IDNumber;
-$idNumberData = (new  IDNumber($idNum))->getIDNumberData();
+$idNumberData = (new  IDNumberParser($idNum))->parse();
 
 echo  "ID Number: ".$idNumberData->getIdNumber()."<br />";
 echo  "Birthdate: ".$idNumberData->getBirthdate()."<br />";
 echo  "Age: ".$idNumberData->getAge()."<br />";
 echo  "Citizenship: ".$idNumberData->getCitizenship()."<br />";
 echo  "Gender: ".$idNumberData->getGender()."<br />";
-echo  "Is Valid ID: ".$idNumberData->isValid() ? 'Yes' : 'No';
+echo  "Is Valid ID: ".($idNumberData->isValid() ? 'Yes' : 'No');
 
 print_r($idNumberData->toArray());
 /*
@@ -35,8 +35,8 @@ print_r($idNumberData->toArray());
 ## Contributing
 You can contribute in one of three ways:
 
-1. File bug reports using the [issue tracker](https://github.com/talifhani/za-id-validator/issues).
-2. Answer questions or fix bugs on the [issue tracker](https://github.com/talifhani/za-id-validator/issues).
+1. File bug reports using the [issue tracker](https://github.com/semicolon/za-id-validator/issues).
+2. Answer questions or fix bugs on the [issue tracker](https://github.com/semicolon/za-id-validator/issues).
 3. Contribute new features or update the wiki.
 
 _The code contribution process is not very formal. You just need to make sure that you follow the PSR-0, PSR-1, and PSR-2 coding guidelines. Any new code contributions must be accompanied by unit tests where applicable._
