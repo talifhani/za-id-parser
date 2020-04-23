@@ -1,4 +1,4 @@
-<?php namespace SemicolonZA\ZaIdValidator\Test;
+<?php namespace SemicolonZA\ZaIdParser\Test;
 
 use PHPUnit\Framework\TestCase;
 use SemicolonZA\ZaIdValidator\IDNumberData;

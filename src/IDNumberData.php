@@ -1,4 +1,4 @@
-<?php namespace SemicolonZA\ZaIdValidator;
+<?php namespace Talifhani\ZaIdParser;
 
 /**
  * @author Tali Luvhengo <tali@semicolon.co.za>

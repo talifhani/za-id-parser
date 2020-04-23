@@ -1,5 +1,5 @@
 {
-    "name": "semicolonza/za-id-validator",
+    "name": "talifhani/za-id-parser",
     "description": "Package to parse and validate South African ID Numbers",
     "license": "MIT",
     "require-dev": {
@@ -13,12 +13,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "SemicolonZA\\ZaIdValidator\\": "src/"
+            "Talifhani\\ZaIdParser\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "SemicolonZA\\ZaIdValidator\\": "test/"
+            "Talifhani\\ZaIdParser\\": "test/"
         }
     },
     "scripts": {

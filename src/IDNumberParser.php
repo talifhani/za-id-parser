@@ -1,9 +1,9 @@
-<?php namespace SemicolonZA\ZaIdValidator;
+<?php namespace Talifhani\ZaIdParser;
 
 /**
  * @author Tali Luvhengo <tali@semicolon.co.za>
  */
-class IDNumber
+class IDNumberParser
 {
     private $birthYearNum;
     private $birthMonthNum;
@@ -55,7 +55,7 @@ class IDNumber
      * @param string $idNumber
      * @return IDNumberData
      */
-    public function getIDNumberData(): IDNumberData
+    public function parse(): IDNumberData
     {
         $birthYear = $this->getBirthYearFromTwoDigitYear($this->birthYearNum);
 
@@ -77,27 +77,8 @@ class IDNumber
      */
     private function calculateCheckBit(string $idNumber): int
     {
-        $evensum = 0;
-        $oddsum = 0;
-
-        $oddString = substr(preg_replace('/(.)./', '$1', $idNumber), 0, -1); //Extract Odd characters exclude last one
-        $oddsum = array_sum(str_split($oddString)); //Sum each odd character
-
-        $idNumArray = str_split($idNumber);
-
-        array_walk($idNumArray, function( & $character, $index){
-            $character = ($index % 2) != 0 ? $character : '';
-        });
-
-        $evenString = implode('', $idNumArray);
-
-        $evenString = $evenString * 2;
-
-        $evenSum = array_sum(str_split($evenString));
-
-        $evenOddSum = $evenSum + $oddsum;
-
-        return (10 - substr($evenOddSum, -1));
+        $withoutChecksum = substr($idNumber, 0, -1);
+		return (new Luhn)->generate($withoutChecksum);
     }
 
     /**
