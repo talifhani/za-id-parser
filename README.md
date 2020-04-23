@@ -4,13 +4,13 @@ Package to parse and validate South African ID Numbers.</p>
 
 ```shell
 
-$ composer require semicolonza/za-id-validator -vvv
+$ composer require talifhani/za-id-parser -vvv
 
 ```
 
 ## Usage
 ```php
-use SemicolonZA\ZaIdValidator\IDNumber;
+use Talifhani\ZaIdParser\IDNumber;
 $idNumberData = (new  IDNumberParser($idNum))->parse();
 
 echo  "ID Number: ".$idNumberData->getIdNumber()."<br />";
