@@ -1,4 +1,4 @@
-# South African Personal ID Validator  
+# South African Personal ID Parser/Validator  
 Package to parse and validate South African ID Numbers.</p>  
 ## Installing
 
