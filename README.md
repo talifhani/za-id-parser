@@ -10,7 +10,7 @@ $ composer require talifhani/za-id-parser -vvv
 
 ## Usage
 ```php
-use Talifhani\ZaIdParser\IDNumber;
+use Talifhani\ZaIdParser\IDNumberParser;
 $idNumberData = (new  IDNumberParser($idNum))->parse();
 
 echo  "ID Number: ".$idNumberData->getIdNumber()."<br />";
